@@ -13,6 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::namespace(value:'Site')->group(function(){
+//    Route::get(uri:'/', action:'HomeController');
+// });
+// Route::namespace(value:'Site')->group(function(){
+// 	// Route::get(uri:'/', action:'HomeController');
+//     return view(view:'site.home.index');
+// });
+
+
+// Route::namespace(value:'Site')->group(function(){
+//     Route::get('/',[HomeController::class, 'index']);
+// });
+
+Route::namespace('App\Http\Controllers\Site')->group(function(){
+    
+    Route::get('/', 'HomeController');
+    
+    Route::get('produtos', 'CategoryController@index');
+    // Route::get('produtos/{slug}', 'CategoryController@show');
+    Route::get('produtos/{slug}', 'CategoryController@show');
 });
