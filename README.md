@@ -9,9 +9,9 @@ Repositório para entregar o projeto final da disciplina eletiva programação d
 | Fernando Sousa   | SP3017061  |
 
 # Créditos
-[Geração da logomarca](https://namelix.com/app/?keywords=blog+webservice)
-[Beer and Code - Laravel do Zero](https://www.youtube.com/watch?v=eiYfQzDLyeY&list=PL7ScB28KYHhHEC8DGfhDt7WdHe7s6A56J)
-[MMPX - Design do Front](http://mmpx.com.br/)
+- [Geração da logomarca](https://namelix.com/app/?keywords=blog+webservice)
+- [Beer and Code - Laravel do Zero](https://www.youtube.com/watch?v=eiYfQzDLyeY&list=PL7ScB28KYHhHEC8DGfhDt7WdHe7s6A56J)
+- [MMPX - Design do Front](http://mmpx.com.br/)
 
 
 # Como rodar
