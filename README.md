@@ -43,11 +43,11 @@ DB_PASSWORD=
 ## Como rodar pelo laravel
 1. Instale o [composer](https://getcomposer.org/doc/00-intro.md#installation-windows)
 2. Agora pelo composer, instale o [laravel](https://laravel.com/docs/8.x/installation#installation-via-composer)
-3. Rode dentro dentro de um terminal, no diretório do projeto, o comando 
+3. Rode dentro dentro de um terminal, no diretório do projeto, o comando para instalar as dependências.
 ```shell
 composer install
 ``` 
-para instalar as dependências
+
 4. Agora rode o projeto com o seguinte comando:
 ```shell
 php artisan serve
@@ -56,5 +56,5 @@ php artisan serve
 	1. Coloque na barra de pesquisa *"variáveis"* e entre em *"Editar as variáveis de ambiente do sistema"*.
 	2. Nas variáveis de usuário, selecione a variável "Path" e clique em editar
 	3. Clique em novo e cole a seguinte linha: `C:\xampp\php`
-	4. Dê OK, salve tudo e tente o comando da etapa 3. novamente
+	4. Dê OK, salve tudo e tente o comando da etapa 4. novamente
 6.  Abra no navegador o projeto pelo link fornecido pelo laravel. O padrão é: http://127.0.0.1:8000
