@@ -20,11 +20,10 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($slug){
+        return view('site.category.show', ['slug' => $slug]);
     }
 }

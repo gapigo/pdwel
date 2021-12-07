@@ -1,1 +1,1 @@
-essa é a página do produto {{slug}}
+essa é a página produto {{$slug}}
