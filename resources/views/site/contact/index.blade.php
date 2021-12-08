@@ -11,15 +11,22 @@ Formulário de contato
             <p>Hercle, abnoba dexter!, racana! Hippotoxota noceres, tanquam gratis luna. Lotus, noster lactas rare captis de fortis, audax omnia.</p>
             <section class="contact__options">
 
-                <form class="contact__form">
-                    <label for="text">Nome completo</label>
-                    <input id="text" name="FullName" type="text" required tabindex="1" placeholder="Ex: José da Silva" autofocus>
+                <form class="contact__form" action="{{route('site.contact.form')}}" method="post">
+                @csrf
+                    <div class="form-row">
+                    <label for="name">Nome Completo</label>
+                        <input id="name" name="name" type="text" required tabindex="2" placeholder="Ex: Fulano da Silva">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required tabindex="2" placeholder="Ex: exemplo@email.com.br">
+                    </div>
 
-                    <label for="text">Email</label>
-                    <input id="email" name="mail" type="email" required tabindex="2" placeholder="Ex: email@email.com.br">
-
+                    <div class="form-row">
                     <label for="message">Mensagem</label>
-                    <textarea id="message" name="WrirteMessage"  required tabindex="3"  cols="20" rows="4" placeholder="Digite aqui..."></textarea>
+                    <textarea id="message" name="message"  required tabindex="3"  cols="20" rows="4" placeholder="Digite aqui..."></textarea>
+                    </div>
 
                     <button class="button button_primary" type="submit">Enviar mensagem</button>
                 </form>
@@ -54,8 +61,8 @@ Formulário de contato
                         </a>
                     </div>
                     <section class="contact__infos__social-media">
-                        <a href="https://www.facebook.com/fertgaia/" target="_blank">Facebook /</a>
-                        <a href="javascript:;"> YouTube</a>
+                        <a href="#" target="_blank">Facebook /</a>
+                        <a href="#"> YouTube</a>
                     </section>
                 </div>
             </section>
