@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,16 +15,20 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view(view:'site.category.index');
+        
+        return view(view:'site.category.index', data:[
+            'categories' => Category::all()
+        ]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  $slug
+     * @param  $category
      * @return \Illuminate\Http\Response
      */
-    public function show($slug){
-        return view('site.category.show', ['slug' => $slug]);
+    public function show(Category $category){
+        // dd($category);
+        return view('site.category.show', ['category' => $category]);
     }
 }
