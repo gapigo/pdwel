@@ -28,7 +28,8 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Category $category){
-        // dd($category);
+        // dd($slug);
+        // $category = Category::whereSlug($slug)->first();
         return view('site.category.show', ['category' => $category]);
     }
 }

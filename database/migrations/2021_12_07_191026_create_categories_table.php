@@ -13,14 +13,16 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('categories')) {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string(column: 'name');
+            $table->string(column:'slug')->nullable()->unique();
             $table->string(column: 'description');
             $table->string(column: 'image');
             $table->timestamps();
             $table->softDeletes();
-        });
+        });}
     }
 
     /**
@@ -30,6 +32,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category');
+        Schema::dropIfExists('categories');
     }
 }

@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->foreignId(column:'category_id')->constrained();
             $table->string('name');
             $table->text('description');
-            $table->boolean('exclusive');            
+            $table->boolean('exclusive');
             $table->timestamps();
             $table->softDeletes();
         });
