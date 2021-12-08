@@ -4,6 +4,11 @@
 Formulário de contato
 @endsection
 
+@section('css')
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+@endsection
+
 @section('content')
     <div class="gray-background">
         <section class="contact__block contact-wrapper">
@@ -13,21 +18,36 @@ Formulário de contato
 
                 <form class="contact__form" action="{{route('site.contact.form')}}" method="post">
                 @csrf
-                    <div class="form-row">
+                @if(session('success'))
+                <div class='alert alert-success'>{{session('message')}}</div>
+                @endif
+                    <div class="d-flex flex-column">
                     <label for="name">Nome Completo</label>
-                        <input id="name" name="name" type="text" required tabindex="2" placeholder="Ex: Fulano da Silva">
+                        <input id="name" name="name" type="text" tabindex="2" placeholder="Ex: Fulano da Silva"
+                        value="{{old('name')}}">
+                        @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     
-                    <div class="form-row">
+                    <div class="d-flex flex-column">
                         <label for="email">Email</label>
-                        <input id="email" name="email" type="email" required tabindex="2" placeholder="Ex: exemplo@email.com.br">
+                        <input id="email" name="email" type="text" tabindex="2" placeholder="Ex: exemplo@email.com.br"
+                        value="{{old('email')}}">
+                        @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
 
-                    <div class="form-row">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message"  required tabindex="3"  cols="20" rows="4" placeholder="Digite aqui..."></textarea>
+                    <div class="d-flex flex-column">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message"  tabindex="3"  cols="20" rows="4" placeholder="Digite aqui..."
+                        style="margin-bottom: 5%;">{{old('message')}}</textarea>
+                        @error('message')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
-
+                    
                     <button class="button button_primary" type="submit">Enviar mensagem</button>
                 </form>
 

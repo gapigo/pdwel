@@ -46,6 +46,9 @@
 
     <!-- Lightbox -->
     <link rel="stylesheet" type="text/css" href="{{asset('lightbox/css/lightbox.css')}}"/>
+
+    @yield('css')
+
 </head>
 <body>
 <nav>
