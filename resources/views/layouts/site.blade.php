@@ -111,8 +111,8 @@
     <div class="dots_pattern"></div>
     <div class="main-wrapper flex-container">
         <div class="quality-badge">
-            <p>Cur omnia mori? </p>
-            <p>Ubi est barbatus zelus? </p>
+            <p>Siga as redes sociais do WebsiteDiary </p>
+            <p>Acompanhe o dia a dia de programadores que vão te atender. </p>
         </div>
         <ul>
             <li class="footer__links">
@@ -139,8 +139,8 @@
 <section class="sub__footer">
     <div class="main-wrapper flex-container">
         <a href="#"><img src="{{asset('images/Lock-icon.svg')}}">CMS</a>
-        <p>Hercle, bursa bassus!. Cum lacta congregabo, omnes tataes captis velox, teres abactuses. </p>
-        <a href="http://mmpx.com.br/" target="_blank">Deisgn by <strong>MMPX</strong></a>
+        <p>WebsiteDiary </p>
+        <a href="http://mmpx.com.br/" target="_blank">Design by <strong>MMPX</strong></a>
     </div>
 </section>
 

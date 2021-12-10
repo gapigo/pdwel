@@ -3,7 +3,7 @@
 @section('content')
     <header class="common-header">
         <div class="header-wrapper">
-            <h1 class="title-large">With apples drink teriyaki. </h1>
+            <h1 class="title-large">. </h1>
         </div>
         <div class="pattern__header"></div>
     </header>
@@ -27,8 +27,8 @@
 
         <section class="products__list">
             <header>
-                <h2 class="title-large">Cum quadra ridetis, omnes visuses imitari regius, brevis brodiumes. </h2>
-                <p>Ususs favere! Tabes grandis palus est. Sunt mensaes magicae fatalis, placidus genetrixes. Cum musa unda, omnes amores attrahendam pius, noster particulaes. </p>
+                <h2 class="title-large">Variedade de serviços é com a gente mesmo </h2>
+                <p>Aqui descrevemos um deles. Volte uma aba para ver os demais. </p>
             </header>
             @foreach($category->products as $product)
             <article class="product">

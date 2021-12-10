@@ -7,7 +7,7 @@ Categorias de serviços
 @section('content')
     <header class="common-header">
         <div class="header-wrapper">
-            <h1 class="title-large">With apples drink teriyaki. </h1>
+            <h1 class="title-large">Conheça alguns dos serviços que oferecemos: </h1>
         </div>
         <div class="pattern__header"></div>
     </header>
