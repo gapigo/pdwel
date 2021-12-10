@@ -12,8 +12,8 @@ Formulário de contato
 @section('content')
     <div class="gray-background">
         <section class="contact__block contact-wrapper">
-            <h1 class="display-medium">Cur gemna ire? </h1>
-            <p>Hercle, abnoba dexter!, racana! Hippotoxota noceres, tanquam gratis luna. Lotus, noster lactas rare captis de fortis, audax omnia.</p>
+            <h1 class="display-medium">Precisa falar com a gente? </h1>
+            <p>Atendemos você a qualquer hora do dia, de qualquer lugar do mundo! É só chamar em alguma dessas opções de contato.</p>
             <section class="contact__options">
 
                 <form class="contact__form" action="{{route('site.contact.form')}}" method="post">
@@ -55,7 +55,7 @@ Formulário de contato
                     <div>
                         <div class="contact__infos__header">
                             <img src="{{asset('images/phone-contact-icon.svg')}}" alt="">
-                            <h3 class="title-small">Contato por telefone</h3>
+                            <h3 class="title-small">Telefone</h3>
                         </div>
                         <a title="clique no número do telefone para ligar" href="tel:169999999">(16) 99999-9999</a>
                     </div>
@@ -63,15 +63,15 @@ Formulário de contato
                     <div>
                         <div class="contact__infos__header">
                             <img src="{{asset('images/mail-contact-icon.svg')}}" alt="">
-                            <h3 class="title-small">Contato por email</h3>
+                            <h3 class="title-small">Email</h3>
                         </div>
-                        <a title="Clique no email para enviar email automatico" href="mailto:hortus ">finis </a>
+                        <a title="Clique no email para enviar email automatico" href="mailto:hortus ">wesitediary@email.com </a>
                     </div>
 
                     <div>
                         <div class="contact__infos__header">
                             <img src="{{asset('images/pin-map-contact-icon.svg')}}" alt="">
-                            <h3 class="title-small">Lumens nocere! </h3>
+                            <h3 class="title-small">Endereço </h3>
                         </div>
                         <a title="clique no endereço para traçar uma rota" target="_blank" href="https://www.google.com/maps/dir//Av.+Braz+Olaia+Acosta,+727+-+Jardim+California,+Ribeir%C3%A3o+Preto+-+SP,+14026-040/@-21.2117135,-47.8201906,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94b9beccaaa6dccd:0xc472dcfb494d66a5!2m2!1d-47.8180019!2d-21.2117135">
                             Av. Brasil, 333<br>
