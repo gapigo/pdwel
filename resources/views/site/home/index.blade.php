@@ -144,6 +144,8 @@ Home
             </section>
         </section>
     </div>
+
+    <a style="background-image: url(https://i.ibb.co/RvTJC4r/whatsapp.png); border-radius: 34px;width: 60px; font-size: 0; height: 60px;position: fixed;right: 10px;z-index: 999;display: block;bottom: 10px;background-size: 73%;background-repeat: no-repeat;background-color: #1bd741;background-position: center;" target="_blank" href="https://wa.me/5511954836882?text=Ol%C3%A1%2C%20precisa%20de%20ajuda%3F">link whatsapp</a>
 </div>
 
 <section class="cta__home">
