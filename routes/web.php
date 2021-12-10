@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ Route::namespace('Site')->group(function(){
     
     Route::get('produtos', 'CategoryController@index')->name('site.products');
     Route::get('produtos/{category:slug}', 'CategoryController@show')->name('site.products.category');
+    Route::get('edit/categoria/{category:id}', 'CategoryController@editCategory')->name('site.edit.category');
 
     Route::get('blog', 'BlogController')->name('site.blog');
     Route::view(uri:'sobre', view:'site.about.index')->name('site.about');
@@ -42,3 +44,6 @@ Route::namespace('Site')->group(function(){
     Route::get('contato', 'ContactController@index')->name('site.contact');
     Route::post('contato', 'ContactController@form')->name('site.contact.form');;
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
