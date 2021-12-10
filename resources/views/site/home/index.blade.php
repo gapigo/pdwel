@@ -36,9 +36,9 @@ Home
             <div class="infos__category">
                 <h2 class="title-large">Desenvolvedores disponíveis <strong>24h </strong></h2>
                 <hr class="thick_divider">
-                <p>Capios velum, tanquam fortis compater. Prarere recte ducunt ad brevis extum. </p>
+                <p>A todo minuto um programador estará disponível para te oferecer suporte.</p>
                 <a href="products.php" role="button" class="button button_accent
-                        button_large">Victrix historia</a>
+                        button_large">Programadores disponíveis</a>
             </div>
             <img class="home-pattern" src="{{asset('images/home-dots-pattern.svg')}}" alt="">
         </section>
@@ -49,11 +49,10 @@ Home
                      height="447">
             </picture>
             <div class="infos__category">
-                <h2 class="title-large">Abactor, armarium, et clabulare. <strong>barcas </strong></h2>
+                <h2 class="title-large">Suporte <strong>100% online </strong></h2>
                 <hr class="thick_divider">
-                <p>Aonidess sunt galataes de talis nixus. Mens de mirabilis byssus, dignus abnoba! </p>
-                <a href="products-animals.php" role="button" class="button button_accent button_large">Est alter
-                    victrix, cesaris. </a>
+                <p>Tudo o que você precisa na palma da sua mão. Solicite um programador sem precisar sair de casa.</p>
+                <a href="products-animals.php" role="button" class="button button_accent button_large">Atendimento on-line </a>
             </div>
             <img class="home-pattern" src="{{asset('images/home-dots-pattern.svg')}}" alt="">
         </section>
@@ -64,10 +63,10 @@ Home
     <div class="main-wrapper">
         <div class="blog__container">
             <div class="blog__introduction">
-                <h2 class="title-large">Alter, gratis particulas mechanice visum de albus, primus adelphis.</h2>
-                <p>Bursas congregabo! Vae. Orexiss tolerare in antverpia! Neuter, secundus absolutios solite transferre
-                    de altus, gratis elevatus.</p>
-                <a href="blog.php" role="button">Fraticinida, humani</a>
+                <h2 class="title-large">Conheça alguns casos de sucesso!</h2>
+                <p>Temos uma gama gigantesca de programadores das mais diversas áreas que já foram 
+                    capazes de solucionar as dores de mais de 200 clientes</p>
+                <a href="blog.php" role="button">Ver mais</a>
             </div>
 
             <article class="card__post">
@@ -77,8 +76,7 @@ Home
                     </div>
                     <header class="card__post__header">
                         <time class="post__date" datetime="2019-03-29">18 Julho, 2019</time>
-                        <h3 class="body-large">Fidelis, dexter fortiss mechanice consumere de teres, germanus
-                            abactor. </h3>
+                        <h3 class="body-large">E-commerce para loja de roupas.</h3>
                     </header>
                 </a>
             </article>
@@ -89,8 +87,8 @@ Home
                         <img src="{{asset('images/roman-synkevych-vXInUOv1n84-unsplash.jpg')}}">
                     </div>
                     <header class="card__post__header">
-                        <time class="post__date" datetime="2019-03-29">18 Julho, 2019</time>
-                        <h3 class="body-large">Castus danista vix examinares cursus est. </h3>
+                        <time class="post__date" datetime="2019-03-29">21 Fevereiro, 2020</time>
+                        <h3 class="body-large">App para clínica de estética. </h3>
                     </header>
                 </a>
             </article>
@@ -101,8 +99,8 @@ Home
                         <img src="{{asset('images/max-duzij-qAjJk-un3BI-unsplash.jpg')}}">
                     </div>
                     <header class="card__post__header">
-                        <time class="post__date" datetime="2019-03-29">18 Julho, 2019</time>
-                        <h3 class="body-large">Prarere superbe ducunt ad fidelis homo. </h3>
+                        <time class="post__date" datetime="2019-03-29">05 Maio, 2020</time>
+                        <h3 class="body-large">Automação para diretores cinematográficos. </h3>
                     </header>
                 </a>
             </article>
@@ -114,20 +112,19 @@ Home
 <div class="gray-background testimonials__mobile">
     <div class="main-wrapper flex-container">
         <section class="testimonials">
-            <h2 class="title-large">Est placidus orexis, cesaris. <br>nunquam aperto vortex.</h2>
+            <h2 class="title-large">Conheça nossos clientes. <br>O que você pode esperar de nós.</h2>
             <section class="flex-container">
                 <article class="quote">
                     <div class="avatar__testimonial">
                         <img src="{{asset('images/Avatar-testimonial.png')}}">
                     </div>
                     <blockquote>
-                        Sunt zeluses visum secundus, gratis barcases. Pius caesium solite magicaes mons est. Consilium
-                        messiss, tanquam altus epos. Sunt fluctuies tractare salvus, festus byssuses. Cum calcaria
-                        accelerare, omnes luraes manifestum alter, dexter rationees.
+                        O time da WebsiteDiary é simplesmente o melhor com quem já trabalhei. Sempre presentes quando 
+                        precisei, resolveram meu problema com maestria.
                     </blockquote>
                     <footer>
-                        <h4 class="title-medium">Nunquam talem stella. </h4>
-                        <p>Cur ratione observare? </p>
+                        <h4 class="title-medium">Estela Santana. </h4>
+                        <p>Líder do grupo Carrefour. </p>
                     </footer>
                 </article>
 
@@ -136,13 +133,12 @@ Home
                         <img src="{{asset('images/Avatar-testimonial.png')}}">
                     </div>
                     <blockquote>
-                        Sunt zeluses visum secundus, gratis barcases. Pius caesium solite magicaes mons est. Consilium
-                        messiss, tanquam altus epos. Sunt fluctuies tractare salvus, festus byssuses. Cum calcaria
-                        accelerare, omnes luraes manifestum alter, dexter rationees.
+                        A rapidez com que conseguiram desenvolver o aplicativo para minha empresa foi 
+                        sem igual. Foi muito bom poder contar co os meninos da WebsiteDiary.
                     </blockquote>
                     <footer>
-                        <h4 class="title-medium">Nunquam talem stella. </h4>
-                        <p>Cur ratione observare? </p>
+                        <h4 class="title-medium">Murilo Brás. </h4>
+                        <p>CEO da Renner. </p>
                     </footer>
                 </article>
             </section>
@@ -152,10 +148,9 @@ Home
 
 <section class="cta__home">
     <div class="cta__wrapper">
-        <h2 class="title-large">Cum luna favere, omnes gabaliumes captis brevis</h2>
-        <p>Equisos mori! A falsis, stella festus itineris tramitem. Brodiums cadunt in placidus brigantium! Cum
-            assimilatio persuadere, omnes cursuses imitari raptus, alter planetaes.</p>
-        <a href="products.php" role="button" class="button button_accent">Nunquam imperium plasmator. </a>
+        <h2 class="title-large">Está esperando o que?</h2>
+        <p>Nos conte seu problema, nos mostre sua ideia que faremos ela se tornar realidade!</p>
+        <a href="products.php" role="button" class="button button_accent">Faça um orçamento </a>
     </div>
     <div class="pattern"></div>
 </section>
