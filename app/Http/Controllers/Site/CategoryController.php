@@ -15,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        
+
         return view(view:'site.category.index', data:[
             'categories' => Category::all()
         ]);
@@ -31,5 +31,15 @@ class CategoryController extends Controller
         // dd($slug);
         // $category = Category::whereSlug($slug)->first();
         return view('site.category.show', ['category' => $category]);
+    }
+    
+    /**
+    * @param  $category
+    */
+    public function editCategory(Category $category){
+        dd($category);
+        // $category = Category::whereSlug($slug)->first();
+        // Category::
+        return view('site.category.edit', ['category' => $category]);
     }
 }
