@@ -23,7 +23,7 @@ Blog
                 </div>
                 <header class="card__post__header">
                     <time class="post__date" datetime="2019-03-29">18 Julho, 2019</time>
-                    <h3 class="title-medium">Cum tumultumque persuadere, omnes pulchritudinees demitto altus, emeritis valebates. </h3>
+                    <h3 class="title-medium">E-commerce para loja de roupas. </h3>
                 </header>
             </a>
         </article>
@@ -34,8 +34,8 @@ Blog
                     <img src="{{asset('images/roman-synkevych-vXInUOv1n84-unsplash.jpg')}}">
                 </div>
                 <header class="card__post__header">
-                    <time class="post__date" datetime="2019-03-29">18 Julho, 2019</time>
-                    <h3 class="body-large">Compater de emeritis mensa, transferre deus! </h3>
+                    <time class="post__date" datetime="2019-03-29">21 Fevereiro, 2020</time>
+                    <h3 class="body-large">App para clínica de estética. </h3>
                 </header>
             </a>
         </article>
@@ -46,8 +46,8 @@ Blog
                     <img src="{{asset('images/max-duzij-qAjJk-un3BI-unsplash.jpg')}}">
                 </div>
                 <header class="card__post__header">
-                    <time class="post__date" datetime="2019-03-29">18 Julho, 2019</time>
-                    <h3 class="body-large">Palus de altus sectam, aperto advena! </h3>
+                    <time class="post__date" datetime="2019-03-29">05 Maio, 2020</time>
+                    <h3 class="body-large">Automação para diretores cinematográficos. </h3>
                 </header>
             </a>
         </article>
@@ -64,8 +64,8 @@ Blog
                             <img src="{{asset('images/blog/blake-connally-B3l0g6HLxr8-unsplash.jpg')}}">
                         </div>
                         <header class="card__post__header">
-                            <time class="post__date" datetime="2019-03-29">29 Março, 2019</time>
-                            <h3 class="body-large">Cum uria mori, omnes burguses consumere teres, noster resistentiaes. </h3>
+                            <time class="post__date" datetime="2019-03-29">29 Março, 2018</time>
+                            <h3 class="body-large">Desenvolvimento de site para restaurante. </h3>
                         </header>
                     </a>
                 </article>
@@ -76,8 +76,8 @@ Blog
                             <img src="{{asset('images/blog/kobu-agency-67L18R4tW_w-unsplash.jpg')}}">
                         </div>
                         <header class="card__post__header">
-                            <time class="post__date" datetime="2019-03-29">29 Março, 2019</time>
-                            <h3 class="body-large">Cum lapsus mori, omnes rationees contactus brevis, camerarius ignigenaes. </h3>
+                            <time class="post__date" datetime="2019-03-29">12 Abril, 2018</time>
+                            <h3 class="body-large">Plataforma virtual de aulas online e cursos remotos. </h3>
                         </header>
                     </a>
                 </article>
@@ -88,8 +88,8 @@ Blog
                             <img src="{{asset('images/blog/markus-spiske-hvSr_CVecVI-unsplash.jpg')}}">
                         </div>
                         <header class="card__post__header">
-                            <time class="post__date" datetime="2019-03-29">29 Março, 2019</time>
-                            <h3 class="body-large">Hibridas ire in secundus oenipons! Cum historia assimilant. </h3>
+                            <time class="post__date" datetime="2019-03-29">09 Agosto, 2018</time>
+                            <h3 class="body-large">Solução de bugs em aplicação já pronta por outra empresa de devs. </h3>
                         </header>
                     </a>
                 </article>
@@ -100,14 +100,14 @@ Blog
                             <img src="{{asset('images/blog/blake-connally-IKUYGCFmfw4-unsplash.jpg')}}">
                         </div>
                         <header class="card__post__header">
-                            <time class="post__date" datetime="2019-03-29">29 Março, 2019</time>
-                            <h3 class="body-large">Cum orgia potus, omnes liberies resuscitabo velox, festus decores. </h3>
+                            <time class="post__date" datetime="2019-03-29">30 Outubro, 2018</time>
+                            <h3 class="body-large">Automação de manuseio de luzes para uma boate de Curitiba. </h3>
                         </header>
                     </a>
                 </article>
             </div>
             <div class="show-more">
-                <a href="javascript:;" class="button button_secondary">(paginacao padrao do laravel)</a>
+                <a href="javascript:;" class="button button_secondary">Mais artigos</a>
                 <div>
                 </div>
     </section>
