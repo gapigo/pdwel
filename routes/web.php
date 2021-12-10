@@ -34,8 +34,8 @@ Route::namespace('Site')->group(function(){
     
     Route::get('/', 'HomeController')->name(name:'site.home');
     
-    Route::get('produtos', 'CategoryController@index')->name('site.products');
-    Route::get('produtos/{category:slug}', 'CategoryController@show')->name('site.products.category');
+    Route::get('servicos', 'CategoryController@index')->name('site.products');
+    Route::get('servicos/{category:slug}', 'CategoryController@show')->name('site.products.category');
     Route::get('edit/categoria/{category:id}', 'CategoryController@editCategory')->name('site.edit.category');
 
     Route::get('blog', 'BlogController')->name('site.blog');

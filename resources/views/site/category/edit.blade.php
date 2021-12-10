@@ -14,7 +14,7 @@ Editar categorias
 <section class="cms__container main-wrapper">
     <header class="cms__container__header">
         <ul class="cms__container__header__tabs">
-            <li><a href="cms-home.php" class="tab__active">Categorias e produtos</a></li>
+            <li><a href="cms-home.php" class="tab__active">Categorias e serviços</a></li>
             <li><a href="javascript:;">Gerenciar blog</a></li>
         </ul>
     </header>
@@ -39,10 +39,10 @@ Editar categorias
         </div>
         <hr class="thin_divider_overlap">
 
-        <h2 class="title-small">Todos os produtos dessa categoria</h2>
+        <h2 class="title-small">Todos os serviços dessa categoria</h2>
         <p>Clique no nome do produto desejado para editar as informações ou em "Adicionar novo produto” para adicionar</p>
 
-        <!-- Todos os produtos da categoria-->
+        <!-- Todos os serviços da categoria-->
         <section class="cms__grid__items">
             @foreach($category->products as $product)
                 <a href="cms-edit-product.php" class="item__of__grid">
