@@ -12,12 +12,13 @@ Sobre
             <!-- Conteudo sobre a empresa -->
             <section class="about__content">
                 <section class="about__history">
-                    <h1 class="display-medium">Cum era ire, omnes fermiumes anhelare clemens, flavum caculaes.</h1>
-                    <p><strong>Brema :</strong>Eheu, barbatus consilium! Rumor emeritis mensa est. Sunt lunaes imitari talis, flavum eraes. Sunt lumenes carpseris talis, superbus capioes. </p>
-                    <p><strong>Sala </strong>Naviss sunt classiss de altus racana. Cum frondator manducare, omnes cottaes quaestio festus, salvus adiuratores. </p>
-                    <p><strong>Antverpia :</strong>Cur axona nocere? Cum species favere, omnes solitudoes perdere bi-color, peritus vortexes. Est albus silva, cesaris.</p>
+                    <h1 class="display-medium">A empresa que soluciona seus problemas tecnológicos.</h1>
+                    <p><strong>Missão:</strong> Trazer a tecnologia para mais perto do nosso cliente, sem complicação. Demonstrar
+                seriedade, transparência em uma linguagem mais próxima ao nosso usuário.</p>
+                    <p><strong>Ajudar </strong>a solucionar os problemas de qualquer lugar do mundo, sem deslocamentos desnecessários.</p>
+                    <p><strong>Resolver </strong>bugs mesmo que eles sejam de uma aplicação não desenvolvida pela nossa equipe.</p>
                 </section>
-                <p>One must emerge the explosion of the conclusion in order to meet the wind of inner uniqueness.</p>
+                <p>Conte com nosso time para facilitar seu acesso no digital!</p>
 
                 <section class="about__clients">
                     <div class="about__clients__logos">

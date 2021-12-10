@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title')
-Categorias de produtos
+Categorias de serviços
 @endsection
 
 @section('content')
