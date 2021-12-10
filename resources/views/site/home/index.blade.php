@@ -10,7 +10,7 @@ Home
         <div class="main-wrapper">
             <div class="hero__content">
                 <h1 class="display-large">Varius, noster devatios etiam imperium de velox, fortis adiurator.</h1>
-                <a class="button button_sublte button_large" href="javascript:;" role="button">Cur triticum potus? </a>
+                <a class="button button_sublte button_large" href="javascript:;" role="button">Venha comigo, meu nego!</a>
             </div>
             <section class="docked-bar flex-container">
                 <div class="hero__information">
