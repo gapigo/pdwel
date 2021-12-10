@@ -9,12 +9,12 @@ Home
     <div class="hero">
         <div class="main-wrapper">
             <div class="hero__content">
-                <h1 class="display-large">Varius, noster devatios etiam imperium de velox, fortis adiurator.</h1>
-                <a class="button button_sublte button_large" href="javascript:;" role="button">Venha comigo, meu nego!</a>
+                <h1 class="display-large">A assistência técnica sem complicação!</h1>
+                <a class="button button_sublte button_large" href="javascript:;" role="button">Solicite um programador</a>
             </div>
             <section class="docked-bar flex-container">
                 <div class="hero__information">
-                    <p>Rusticus, barbatus pess sed mire tractare de pius, camerarius lixa.</p>
+                    <p>Para mais dúvidas, disque: </p>
                 </div>
                 <div class="talk-to-us">
                     <img src="{{asset('images/Phone-Icon.svg')}}" alt="Telefone Icone">
@@ -34,7 +34,7 @@ Home
                         superbus stella. cur rector volare?" width="297" height="447">
             </picture>
             <div class="infos__category">
-                <h2 class="title-large">Abnoba barbatus animalis est. <strong>antenna </strong></h2>
+                <h2 class="title-large">Desenvolvedores disponíveis <strong>24h </strong></h2>
                 <hr class="thick_divider">
                 <p>Capios velum, tanquam fortis compater. Prarere recte ducunt ad brevis extum. </p>
                 <a href="products.php" role="button" class="button button_accent
