@@ -60,9 +60,9 @@
                         <img src="{{asset('images/logo.png')}}">
                     </a>
                     <ul class="navigation__itens__cms" id="menu">
-                        <p class="tittle-small">Olá, <b>Danilo</b></p>
-                        <a class="body-medium" href="javascript:;">
-                            Sair
+                        <p class="tittle-small">Olá, <b>{{Auth::user()->name}}</b></p>
+                        <a class="body-medium" href="{{route('site.home')}}">
+                            Voltar
                             <img src="{{asset('images/Arrow-left.svg')}}" alt="">
                         </a>
                     </ul>

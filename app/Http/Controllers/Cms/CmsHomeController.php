@@ -12,9 +12,10 @@ class CmsHomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view(view:'cms.home.index');
+        $name = $request->user()->name;
+        return view('cms.home.index', ['name' => $name]);
     }
 
 }

@@ -83,6 +83,24 @@
                         <span class="border-effect"></span>
                     </a>
                 </li>
+                @auth
+                <li>
+                    <a href="{{route('cms.home')}}">CMS
+                        <span class="border-effect"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('cms.logout')}}">Deslogar
+                        <span class="border-effect"></span>
+                    </a>
+                </li>
+                @else
+                <li>
+                    <a href="{{route('cms.login.index')}}">Login
+                        <span class="border-effect"></span>
+                    </a>
+                </li>
+                @endauth
             </ul>
             <!-- Hamburger menu -->
             <div id="toggle">
@@ -99,9 +117,15 @@
     <ul id="menu">
         <li><a class="title-medium" href="{{route('site.home')}}">Página principal</a></li>
         <li><a class="title-medium" href="{{route('site.products')}}">Serviços</a></li>
-        <li><a class="title-medium" href="{{route('site.blog')}}">Blog</a></li>
+        <li><a class="title-medium" href="{{route('site.blog')}}">Bloga</a></li>
         <li><a class="title-medium" href="{{route('site.about')}}">Sobre</a></li>
         <li><a class="title-medium" href="{{route('site.contact')}}">Contato</a></li>
+        @auth
+        <li><a class="title-medium" href="{{route('cms.home')}}">CMS</a></li>
+        <li><a class="title-medium" href="{{route('cms.logout')}}">Deslogar</a></li>
+        @else
+        <li><a class="title-medium" href="{{route('cms.login.index')}}">Login</a></li>
+        @endauth
     </ul>
 </div>
 

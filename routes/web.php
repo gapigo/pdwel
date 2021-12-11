@@ -48,6 +48,11 @@ Route::namespace('Site')->group(function(){
 Route::namespace('Cms')->group(function(){
     
     Route::get('cms', 'CmsHomeController@index')->name(name:'cms.home');
+    Route::get('entrar', 'CmsRegister@index')->name(name:'cms.login.index');
+    Route::post('entrar', 'CmsRegister@login')->name(name:'cms.login.post');
+    Route::get('cadastrar', 'CmsRegister@register')->name(name:'cms.register.index');
+    Route::post('cadastrar', 'CmsRegister@create')->name(name:'cms.register.post');
+    Route::get('logout', 'CmsRegister@logout')->name(name:'cms.logout');
 
     Route::get('edit/categoria/{category:id}', 'CmsCategoryController@editCategory')->name('cms.edit.category');
     Route::get('edit/servico/{product:id}', 'CmsCategoryController@editService')->name('cms.edit.service');
@@ -59,6 +64,6 @@ Route::namespace('Cms')->group(function(){
 
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

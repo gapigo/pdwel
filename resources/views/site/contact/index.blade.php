@@ -65,7 +65,7 @@ Formulário de contato
                             <img src="{{asset('images/mail-contact-icon.svg')}}" alt="">
                             <h3 class="title-small">Email</h3>
                         </div>
-                        <a title="Clique no email para enviar email automatico" href="mailto:hortus ">wesitediary@email.com </a>
+                        <a title="Clique no email para enviar email automatico" href="mailto:hortus ">websitediary@email.com </a>
                     </div>
 
                     <div>
