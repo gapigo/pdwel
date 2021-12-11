@@ -162,7 +162,7 @@
 </footer>
 <section class="sub__footer">
     <div class="main-wrapper flex-container">
-        <a href="#"><img src="{{asset('images/Lock-icon.svg')}}">CMS</a>
+        <a href="@auth{{route('cms.home')}}@else{{route('cms.login.index')}}@endauth"><img src="{{asset('images/Lock-icon.svg')}}">CMS</a>
         <p>WebsiteDiary </p>
         <a href="http://mmpx.com.br/" target="_blank">Design by <strong>MMPX</strong></a>
     </div>

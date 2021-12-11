@@ -10,7 +10,7 @@ Home
         <div class="main-wrapper">
             <div class="hero__content">
                 <h1 class="display-large">A assistência técnica sem complicação!</h1>
-                <a class="button button_sublte button_large" href="javascript:;" role="button">Solicite um programador</a>
+                <a class="button button_sublte button_large" href="{{route('site.products')}}" role="button">Solicite um programador</a>
             </div>
             <section class="docked-bar flex-container">
                 <div class="hero__information">
@@ -37,7 +37,7 @@ Home
                 <h2 class="title-large">Desenvolvedores disponíveis <strong>24h </strong></h2>
                 <hr class="thick_divider">
                 <p>A todo minuto um programador estará disponível para te oferecer suporte.</p>
-                <a href="products.php" role="button" class="button button_accent
+                <a href="{{route('site.products')}}" role="button" class="button button_accent
                         button_large">Programadores disponíveis</a>
             </div>
             <img class="home-pattern" src="{{asset('images/home-dots-pattern.svg')}}" alt="">
@@ -52,7 +52,7 @@ Home
                 <h2 class="title-large">Suporte <strong>100% online </strong></h2>
                 <hr class="thick_divider">
                 <p>Tudo o que você precisa na palma da sua mão. Solicite um programador sem precisar sair de casa.</p>
-                <a href="products-animals.php" role="button" class="button button_accent button_large">Atendimento on-line </a>
+                <a href="{{route('site.contact')}}" role="button" class="button button_accent button_large">Atendimento on-line </a>
             </div>
             <img class="home-pattern" src="{{asset('images/home-dots-pattern.svg')}}" alt="">
         </section>
@@ -66,7 +66,7 @@ Home
                 <h2 class="title-large">Conheça alguns casos de sucesso!</h2>
                 <p>Temos uma gama gigantesca de programadores das mais diversas áreas que já foram 
                     capazes de solucionar as dores de mais de 200 clientes</p>
-                <a href="blog.php" role="button">Ver mais</a>
+                <a href="{{route('site.blog')}}" role="button">Ver mais</a>
             </div>
 
             <article class="card__post">
@@ -152,7 +152,7 @@ Home
     <div class="cta__wrapper">
         <h2 class="title-large">Está esperando o que?</h2>
         <p>Nos conte seu problema, nos mostre sua ideia que faremos ela se tornar realidade!</p>
-        <a href="products.php" role="button" class="button button_accent">Faça um orçamento </a>
+        <a href="#" role="button" class="button button_accent">Faça um orçamento </a>
     </div>
     <div class="pattern"></div>
 </section>
