@@ -13,9 +13,8 @@ A nossa aplicação é um fórum de FreeLancer e compartilhamento de experiênci
 
 # Créditos
 - [Geração da logomarca](https://namelix.com/app/?keywords=blog+webservice)
-- [Beer and Code - Laravel do Zero](https://www.youtube.com/watch?v=eiYfQzDLyeY&list=PL7ScB28KYHhHEC8DGfhDt7WdHe7s6A56J)
+- [Beer and Code - Laravel do Zero](https://www.youtube.com/watch?v=eiYfQzDLyeY&list=PL7ScB28KYHhHEC8DGfhDt7WdHe7s6A56J) (Obs: O projeto é um "fork" desse material, mas a maior parte do conteúdo foi desenvolvido pelos alunos)
 - [MMPX - Design do Front](http://mmpx.com.br/)
-(Obs: O projeto é um "fork" desse material, mas a maior parte do conteúdo foi desenvolvido pelos alunos)
 
 
 # Como rodar
