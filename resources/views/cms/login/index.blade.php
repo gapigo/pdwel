@@ -12,9 +12,9 @@ Home
 @section('content')
         <div class="gray-background">
             <div class="login__center main-wrapper" style="margin-bottom: 20%">
-                <form class="form__login" action="{{route('cms.login.post')}}" method="post">
+                <form class="form__login" action="{{route('cms.login.post')}}" method="post" style="margin-top: 13%">
                     @csrf
-                    <div class="form__login__header flex-container" style="margin-top: 10%">
+                    <div class="form__login__header flex-container">
                         <img src="./images/Login-Icon.svg" alt="Login icon">
                         <h2 class="title-small">CMS<h2>
                     </div>

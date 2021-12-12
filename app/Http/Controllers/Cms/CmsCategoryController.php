@@ -26,6 +26,22 @@ class CmsCategoryController extends Controller
         return view('cms.product.edit', ['Product' => $product]);
     }
 
+    /**
+    * @param  $category
+    */
+    public function deleteCategory(Category $category){
+        // dd($category);
+        return view('cms.category.edit', ['category' => $category]);
+    }
+
+    /**
+    * @param  $product
+    */
+    public function deleteService(Product $product){
+        // dd($product);
+        return view('cms.product.edit', ['Product' => $product]);
+    }
+
     public function createCategory(){
         return view('cms.category.create');
     }

@@ -4,6 +4,18 @@
 Editar categorias
 @endsection
 
+@section('css')
+{{-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> --}}
+<script src="https://cdn.tiny.cloud/1/u5yci7u2lbwyacv3u3rq69xep7snw52w939mh6mnqlvhoq7w/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins:'link code',
+        menubar: false
+    });
+</script>
+@endsection
+
 @section('content')
 <header class="common-header">
     <div class="pattern__header"></div>
@@ -19,51 +31,163 @@ Editar categorias
         </ul>
     </header>
     <section class="cms__container__content">
-        <div class="split__container">
-            <h2 class="title-small">Nova postagem</h2>
-            <p>Preencha os campos abaixo para publicar um novo post</p>
+        <form id="blog_form" action="{{route('cms.update.post')}}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="split__container">
+                <h2 class="title-small">Nova postagem</h2>
+                <p>Preencha os campos abaixo para publicar um novo post</p>
+                <input type="hidden" name="id" value="0">
+                <label for="post-title">Titulo da postagem</label>
+                <input id="post-title" type="text" name="title" tabindex="1" required autofocus placeholder="Ex: Novo produto">
+    
+                <span class="label">Imagem de capa</span>
+                <label for="post-cover-img" class="button add_new">Clique para adiconar imagem de capa</label>
+                <input id="post-cover-img" value="Clique para adiconar imagem de capa" type="file" name="image" tabindex="2" multiple  accept="image/png, image/jpeg" required>
+                <output id="list"></output>
+                <script>
+                    function handleFileSelect (evt) {
+                    // Loop through the FileList and render image files as thumbnails.
+                    for (const file of evt.target.files) {
 
-            <label for="post-title">Titulo da postagem</label>
-            <input id="post-title" type="text" tabindex="1" required autofocus placeholder="Ex: Novo produto">
+                        cleanPreview();
+                        // Render thumbnail.
+                        const span = document.createElement('span')
+                        const src = URL.createObjectURL(file)
+                        span.innerHTML = 
+                        `<img style="height: 75px; border: 1px solid #000; margin: 5px"` + 
+                        `src="${src}" title="${escape(file.name)}">`
 
-            <span class="label">Imagem de capa</span>
-            <label for="post-cover-img" class="button add_new">Clique para adiconar imagem de capa</label>
-            <input id="post-cover-img" value="Clique para adiconar imagem de capa" type="file" tabindex="2" multiple  accept="image/png, image/jpeg" required>
-        </div>
+                        document.getElementById('list').insertBefore(span, null)
+                    }
+                    }
 
-        <hr class="thin_divider_overlap">
-
-        <div class="split__container">
-            <h2 class="title-small">Conteúdo</h2>
-            <p>Preencha o conteudo da postagem</p>
-
-            <label for="paragraphy-1">Parágrafo</label>
-            <textarea id="paragraphy-1" cols="30" rows="9" required tabindex="3" placeholder="Ex: Estimula a maturação"></textarea>
-
-            <hr class="thin_divider">
-
-            <div class="blog__toolbar">
-                <div class="blog__toolbar__container">
-                    <button data-modal="gallery" class="trigger blog__toolbar__button"><img src="./images/toolbar/toolbar-gallery.svg" alt="">Galeria</button>
-                    <button data-modal="image" class="trigger blog__toolbar__button"><img src="./images/toolbar/toolbar-image.svg" alt="">Imagem</button>
-                    <button data-modal="video" class="trigger blog__toolbar__button"><img src="./images/toolbar/toolbar-video.svg" alt="">Vídeo</button>
-                    <button class="blog__toolbar__button"><img src="./images/toolbar/toolbar-title.svg" alt="">Título</button>
-                    <button class="blog__toolbar__button"><img src="./images/toolbar/toolbar-paragraph.svg" alt="">Parágrafo</button>
-                </div>
+                    document.getElementById('post-cover-img').addEventListener('change', handleFileSelect, false);
+                </script>
             </div>
-        </div>
+    
+            <hr class="thin_divider_overlap">
+    
+            <div class="split__container">
+                <h2 class="title-small">Conteúdo</h2>
+                <p>Preencha o conteudo da postagem</p>
+    
+                <label for="paragraphy-1">Parágrafo</label>
+                <textarea id="paragraphy-1" name="content" cols="30" rows="9" required tabindex="3" placeholder="Ex: O PHP Laravel é um framework poderoso"></textarea>
+    
+                <hr class="thin_divider">
+    
+                {{-- <div class="blog__toolbar">
+                    <div class="blog__toolbar__container">
+                        <button data-modal="gallery" class="trigger blog__toolbar__button"><img src="./images/toolbar/toolbar-gallery.svg" alt="">Galeria</button>
+                        <button data-modal="image" class="trigger blog__toolbar__button"><img src="./images/toolbar/toolbar-image.svg" alt="">Imagem</button>
+                        <button data-modal="video" class="trigger blog__toolbar__button"><img src="./images/toolbar/toolbar-video.svg" alt="">Vídeo</button>
+                        <button class="blog__toolbar__button"><img src="./images/toolbar/toolbar-title.svg" alt="">Título</button>
+                        <button class="blog__toolbar__button"><img src="./images/toolbar/toolbar-paragraph.svg" alt="">Parágrafo</button>
+                    </div>
+                </div> --}}
+            </div>
+        
     </section>
 
 
-    <footer class="cms__container__footer flex-container">
+    <div class="cms__container__footer flex-container">
         <div>
-            <a href="javascript:;" class="button button_disabled" role="button">Publicar nova postagem</a>
-            <a href="cms-home.php" class="button button_disabled" role="button">Cancelar</a>
+            {{-- <button class="button" role="button" type="submit">Publicar nova postagem</button> --}}
+            <button class="button button_primary" id="send_button">Publicar nova postagem</button>
+            <a href="{{route('cms.home')}}" class="button" role="button">Cancelar</a>
         </div>
         <div>
-            <a href="javascript:;" class="footer__delete footer__delete__disabled " role="button">Excluir postagem</a>
+            <a id="footer__delet" class="footer__delete" role="button">Excluir postagem</a>
         </div>
-    </footer>
+        <script>
+            function cleanPreview(){
+                let preview = document.getElementById('list').children;
+                for(let i = preview.length - 1; i >= 0; i--)
+                    preview[i].remove();
+            }
+            function limparCampos (evt) {
+            
+            // Limpa o titulo
+            document.getElementById('post-title').value = '';
+
+            // Limpa os arquivos
+            document.getElementById('post-cover-img').value= null;
+            
+            // Limpa o preview de imagens
+            cleanPreview();
+
+            // Limpa a área de texo
+            tinyMCE.activeEditor.setContent('');
+            }
+            function sendForm(evt){
+                let content = tinyMCE.activeEditor.getContent();
+                document.getElementById('paragraphy-1').value = content;
+                let erros = false;
+                if (document.getElementById('paragraphy-1').value == ''){
+                    alert('Escreva algo no parágrafo!')
+                    erros = true;
+                }
+                if (document.getElementById('post-cover-img').files.length == 0){
+                    alert('Envie uma imagem!')
+                    erros = true;
+                }
+                if (document.getElementById('post-title').value == ''){
+                    alert('Coloque um título!')
+                    erros = true;
+                }
+                if (!erros){
+                    document.getElementById('blog_form').submit();
+                }
+
+
+            }
+
+            document.getElementById('footer__delet').addEventListener('click', limparCampos, false);
+            document.getElementById('send_button').addEventListener('click', sendForm, false);
+        </script>
+    </div>
+    </form>
 </section>
+{{-- 
+<script>
+const addArticle = (ele, data) => {
+    data = data.split("\n").filter(item => item.length);
+    // console.log(data);
+
+    data.forEach(item => {
+        // check for heading
+        if(item[0] == '#'){
+            let hCount = 0;
+            let i = 0;
+            while(item[i] == '#'){
+                hCount++;
+                i++;
+            }
+            let tag = `h${hCount}`;
+            ele.innerHTML += `<${tag}>${item.slice(hCount, item.length)}</${tag}>`
+        } 
+        //checking for image format
+        else if(item[0] == "!" && item[1] == "["){
+            let seperator;
+
+            for(let i = 0; i <= item.length; i++){
+                if(item[i] == "]" && item[i + 1] == "(" && item[item.length - 1] == ")"){
+                    seperator = i;
+                }
+            }
+
+            let alt = item.slice(2, seperator);
+            let src = item.slice(seperator + 2, item.length - 1);
+            ele.innerHTML += `
+            <img src="${src}" alt="${alt}" class="article-image">
+            `;
+        }
+
+        else{
+            ele.innerHTML += `<p>${item}</p>`;
+        }
+    })
+}
+</script> --}}
 @endsection
 

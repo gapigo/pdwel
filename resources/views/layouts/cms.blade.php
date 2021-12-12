@@ -43,7 +43,8 @@
         <link rel="apple-touch-icon" sizes="256x256" href="{{asset('images/Frame.svg')}}">
         <link rel="apple-touch-icon" sizes="384x384" href="{{asset('images/Frame.svg')}}">
         <link rel="apple-touch-icon" sizes="512x512" href="{{asset('images/Frame.svg')}}">
-
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <!-- Lightbox -->
         <link rel="stylesheet" type="text/css" href="{{asset('lightbox/css/lightbox.css')}}"/>
 

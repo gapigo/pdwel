@@ -39,7 +39,7 @@ class CmsRegister extends Controller
 
             return redirect()->route('cms.home');
         }
-        dd($request);
+        // dd($request);
         return back()->withErrors([
             'email' => 'O seguinte email não está cadastrado ou não bate com a senha fornecida.',
         ]);

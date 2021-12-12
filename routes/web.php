@@ -37,33 +37,37 @@ Route::namespace('Site')->group(function(){
     Route::get('servicos', 'CategoryController@index')->name('site.products');
     Route::get('servicos/{category:slug}', 'CategoryController@show')->name('site.products.category');
 
-    Route::get('blog', 'BlogController')->name('site.blog');
-    Route::get('post/{post:id}', 'BlogController@editCategory')->name('site.show.post');
+    Route::get('blog', 'BlogController@index')->name('site.blog');
+    Route::get('post/{post:id}', 'BlogController@showPost')->name('site.show.post');
     Route::view(uri:'sobre', view:'site.about.index')->name('site.about');
 
     Route::get('contato', 'ContactController@index')->name('site.contact');
     Route::post('contato', 'ContactController@form')->name('site.contact.form');;
+
+    // Route::get('post/{category:slug}', 'CategoryController@show')->name('site.products.category');
 });
 
 Route::namespace('Cms')->group(function(){
     
-    Route::get('cms', 'CmsHomeController@index')->name(name:'cms.home');
+    Route::get('cms', 'CmsHomeController@index')->name(name:'cms.home')->middleware('auth');
     Route::get('entrar', 'CmsRegister@index')->name(name:'cms.login.index');
     Route::post('entrar', 'CmsRegister@login')->name(name:'cms.login.post');
     Route::get('cadastrar', 'CmsRegister@register')->name(name:'cms.register.index');
     Route::post('cadastrar', 'CmsRegister@create')->name(name:'cms.register.post');
     Route::get('logout', 'CmsRegister@logout')->name(name:'cms.logout');
 
-    Route::get('edit/categoria/{category:id}', 'CmsCategoryController@editCategory')->name('cms.edit.category');
-    Route::get('edit/servico/{product:id}', 'CmsCategoryController@editService')->name('cms.edit.service');
-    Route::get('create/categoria', 'CmsCategoryController@createCategory')->name('cms.create.category');
-    Route::get('create/servico', 'CmsCategoryController@createService')->name('cms.create.service');
+    Route::get('edit/categoria/{category:id}', 'CmsCategoryController@editCategory')->name('cms.edit.category')->middleware('auth');
+    Route::get('edit/servico/{product:id}', 'CmsCategoryController@editService')->name('cms.edit.service')->middleware('auth');
+    Route::get('delete/categoria/{category:id}', 'CmsCategoryController@deleteCategory')->name('cms.delete.category')->middleware('auth');
+    Route::get('delete/servico/{product:id}', 'CmsCategoryController@deleteService')->name('cms.delete.service')->middleware('auth');
+    Route::get('create/categoria', 'CmsCategoryController@createCategory')->name('cms.create.category')->middleware('auth');
+    Route::get('create/servico', 'CmsCategoryController@createService')->name('cms.create.service')->middleware('auth');
 
-    Route::get('edit/post/{post:id}', 'CmsBlogController@editPost')->name('cms.edit.post');
-    Route::get('create/post', 'CmsBlogController@createPost')->name('cms.create.post');
+    Route::get('edit/post/{post:id}', 'CmsBlogController@editPost')->name('cms.edit.post')->middleware('auth');
+    Route::get('create/post', 'CmsBlogController@createPost')->name('cms.create.post')->middleware('auth');
+    Route::post('update/post', 'CmsBlogController@updatePost')->name('cms.update.post')->middleware('auth');
+    Route::get('delete/post/{post:id}', 'CmsBlogController@deletePost')->name('cms.delete.post')->middleware('auth');
 
 });
-
-// Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
