@@ -19,7 +19,12 @@ class CmsHomeController extends Controller
         // $name = $request->user()->name;
         $categories = Category::orderBy('id', 'DESC')->get();
         $posts = Post::orderBy('id', 'DESC')->get();
-        return view('cms.home.index', ['categories' => $categories, 'posts' => $posts]);
+
+        // $term = Input::get('term', false);
+
+        return view('cms.home.index', ['categories' => $categories,
+                                       'posts' => $posts, 
+                                       'blog' => $request->blog]);
     }
 
 }

@@ -1,7 +1,7 @@
 @extends('layouts.cms')
 
 @section('title')
-Editar categorias
+CMS
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@ Editar categorias
 <div class="gray-background-fixed"></div>
 
 <!-- Categoria e produto aba -->
-<section class="cms__container main-wrapper" id="secao_categoria">
+<section class="cms__container main-wrapper" @if($blog)style="display: none"@endif id="secao_categoria">
     <header class="cms__container__header">
         <ul class="cms__container__header__tabs">
             <li><a class="tab__active">Categorias e programadores</a></li>
@@ -59,7 +59,7 @@ Editar categorias
 </section>
 
 <!-- Blog aba -->
-<section class="cms__container main-wrapper" style="display: none" id="secao_blog">
+<section class="cms__container main-wrapper" @if(!$blog)style="display: none"@endif id="secao_blog">
     <header class="cms__container__header">
         <ul class="cms__container__header__tabs">
             <li><a id="nav_categoria">Categorias e programadores</a></li>

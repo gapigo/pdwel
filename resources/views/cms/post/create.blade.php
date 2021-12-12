@@ -94,7 +94,7 @@ Editar categorias
         <div>
             {{-- <button class="button" role="button" type="submit">Publicar nova postagem</button> --}}
             <button class="button button_primary" id="send_button">Publicar nova postagem</button>
-            <a href="{{route('cms.home')}}" class="button" role="button">Cancelar</a>
+            <a href="{{route('cms.home')}}" class="button button_secondary" role="button">Cancelar</a>
         </div>
         <div>
             <a id="footer__delet" class="footer__delete" role="button">Excluir postagem</a>

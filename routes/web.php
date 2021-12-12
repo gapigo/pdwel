@@ -61,7 +61,9 @@ Route::namespace('Cms')->group(function(){
     Route::get('delete/categoria/{category:id}', 'CmsCategoryController@deleteCategory')->name('cms.delete.category')->middleware('auth');
     Route::get('delete/servico/{product:id}', 'CmsCategoryController@deleteService')->name('cms.delete.service')->middleware('auth');
     Route::get('create/categoria', 'CmsCategoryController@createCategory')->name('cms.create.category')->middleware('auth');
+    Route::post('update/categoria', 'CmsCategoryController@updateCategory')->name('cms.update.category')->middleware('auth');
     Route::get('create/servico', 'CmsCategoryController@createService')->name('cms.create.service')->middleware('auth');
+    Route::post('update/servico', 'CmsCategoryController@updateService')->name('cms.update.service')->middleware('auth');
 
     Route::get('edit/post/{post:id}', 'CmsBlogController@editPost')->name('cms.edit.post')->middleware('auth');
     Route::get('create/post', 'CmsBlogController@createPost')->name('cms.create.post')->middleware('auth');

@@ -169,7 +169,7 @@ Editar post
         const src = `{{$image_url}}`;
         span.innerHTML = 
         `<img style="height: 75px; border: 1px solid #000; margin: 5px"` + 
-        `src="${src}" title="$post->image">`;
+        `src="${src}" title="{{$post->image"}}>`;
 
         document.getElementById('list').insertBefore(span, null);
     }
