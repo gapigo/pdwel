@@ -46,7 +46,7 @@ Editar post
     
                 <span class="label">Imagem de capa</span>
                 <label for="post-cover-img" class="button add_new">Clique para adiconar imagem de capa</label>
-                <input id="post-cover-img" value="Clique para adiconar imagem de capa" type="file" name="image" tabindex="2" multiple  accept="image/png, image/jpeg" required>
+                <input id="post-cover-img" value="Clique para adiconar imagem de capa" type="file" name="image" tabindex="2" multiple  accept="image/png, image/jpeg">
                 <output id="list"></output>
                 <script>
                     function handleFileSelect (evt) {
@@ -141,10 +141,6 @@ Editar post
                     alert('Escreva algo no parágrafo!')
                     erros = true;
                 }
-                if (document.getElementById('post-cover-img').files.length == 0){
-                    alert('Envie uma imagem!')
-                    erros = true;
-                }
                 if (document.getElementById('post-title').value == ''){
                     alert('Coloque um título!')
                     erros = true;
@@ -156,7 +152,7 @@ Editar post
 
             }
 
-            document.getElementById('footer__delet').addEventListener('click', limparCampos, false);
+            // document.getElementById('footer__delet').addEventListener('click', limparCampos, false);
             document.getElementById('send_button').addEventListener('click', sendForm, false);
         </script>
     </div>
@@ -169,7 +165,7 @@ Editar post
         const src = `{{$image_url}}`;
         span.innerHTML = 
         `<img style="height: 75px; border: 1px solid #000; margin: 5px"` + 
-        `src="${src}" title="{{$post->image"}}>`;
+        `src="${src}" title="{{$post->image}}">`;
 
         document.getElementById('list').insertBefore(span, null);
     }

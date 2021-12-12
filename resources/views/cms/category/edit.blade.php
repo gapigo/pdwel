@@ -86,21 +86,35 @@ Editar categoria
         <!-- Todos os serviços da categoria-->
         <section class="cms__grid__items">
             @foreach($category->products as $product)
-                <a href="cms-edit-product.php" class="item__of__grid">
+                <a class="item__of__grid">
                     <div class="item__infos">
                         <p class="body-large">{{$product->name}}</p>
                     </div>
                     <button class="item__vetical__menu dropdown">
                         <img src="{{asset('images/vertical-menu.svg')}}" alt="">
                         <div class="dropdown__content">
-                            <p><img src="{{asset('images/edit-icon.svg')}}" alt="">Editar programador</p>
-                            <p><img src="{{asset('images/delete-icon.svg')}}" alt="">Excluir programador</p>
+                            {{-- <p><img src="{{asset('images/edit-icon.svg')}}" alt="">Editar programador</p>
+                            <p><img src="{{asset('images/delete-icon.svg')}}" alt="">Excluir programador</p> --}}
+
+                            <p id="edit_programador_button_{{$product->id}}">
+                                <img src="{{asset('images/edit-icon.svg')}}" alt="">Editar</p>
+                            <p id="delete_programador_button_{{$product->id}}">
+                                <img src="{{asset('images/delete-icon.svg')}}" alt="">Excluir</p>
+                            <script>
+                                document.getElementById("edit_programador_button_{{$product->id}}").onclick = function () {
+                                    location.href = "{{route('cms.edit.service', ['product'=> $product])}}";
+                                };
+                                document.getElementById("delete_programador_button_{{$product->id}}").onclick = function () {
+                                    location.href = "{{route('cms.delete.service', ['product'=> $product])}}";
+                                };
+                            </script>
+
                         </div>
                     </button>
                 </a>
             @endforeach
 
-            <a href="cms-new-product.php" class="button add_new button_large" role="button">Adicionar novo programador</a>
+            <a href="{{route('cms.create.service')}}" class="button add_new button_large" role="button">Adicionar novo programador</a>
         </section>
     </section>
 

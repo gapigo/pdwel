@@ -1,5 +1,9 @@
 @extends('layouts.site')
 
+@section('title')
+Categoria - {{$category->name}}
+@endsection
+
 @section('content')
     <header class="common-header">
         <div class="header-wrapper">

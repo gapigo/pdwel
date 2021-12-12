@@ -14,9 +14,11 @@ class CmsCategoryController extends Controller
     /**
     * @param  $category
     */
-    public function editCategory(Category $category){
+    public function editCategory(Request $request, Category $category){
         // dd($category);
-
+        $request->session()->put('category',$category);
+        // dd($request);
+        
         return view('cms.category.edit', ['category' => $category]);
     }
 
@@ -25,7 +27,8 @@ class CmsCategoryController extends Controller
     */
     public function editService(Product $product){
         // dd($product);
-        return view('cms.product.edit', ['Product' => $product]);
+        
+        return view('cms.product.edit', ['product' => $product]);
     }
 
     /**
@@ -47,8 +50,9 @@ class CmsCategoryController extends Controller
 
     public function deleteService(Product $product){
         $product->delete();
-        // dd('Ola mundo');
-        return redirect('cms');
+        // dd($product);
+        // return redirect('cms');
+        return redirect('edit/categoria/'.$product->category_id);
     }
 
     // /**
@@ -63,8 +67,12 @@ class CmsCategoryController extends Controller
         return view('cms.category.create');
     }
 
-    public function createService(){
-        return view('cms.product.create');
+    public function createService(Request $request){
+        $category = $request->session()->get('category');
+        // dd($category);
+        if ($category)
+            return view('cms.product.create', ['category' => $category]);
+        return redirect()->route('cms.home');
     }
 
     public function updateCategory(Request $request){
@@ -86,6 +94,27 @@ class CmsCategoryController extends Controller
         // return view('cms.home');
         // return route('cms.home');
         return redirect()->route('cms.home');
+    }
+
+    public function updateService(Request $request){
+        // dd($request);
+        // dd($request->category_id);
+        // dd($request->product);
+        if($request->id == 0)
+            $product =  new Product;
+        else
+            $product =  Product::find($request->id);
+
+        $product->name = $request->name;
+        $product->category_id = $request->category_id;
+        $product->description = $request->description;
+        $product->exclusive = $request->exclusive;
+        $product->save();
+        // dd($request);
+        // return view('cms.home');
+        // return route('cms.home');
+        // return redirect()->route('cms.home');
+        return redirect('edit/categoria/'.$request->category_id);
     }
     
     

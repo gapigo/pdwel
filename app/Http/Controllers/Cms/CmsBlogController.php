@@ -47,12 +47,14 @@ class CmsBlogController extends Controller
         // dd($request);
         // return view('cms.home');
         $post_id = $post->id;
-        return redirect('post/'.$post_id);
+        // return redirect('post/'.$post_id);
+        return redirect()->route('cms.home', ['blog' => 1]);
     }
 
     public function deletePost(Post $post){
         $post->delete();
         // dd('Ola mundo');
-        return redirect('cms');
+        // return redirect('cms');
+        return redirect()->route('cms.home', ['blog' => 1]);
     }
 }

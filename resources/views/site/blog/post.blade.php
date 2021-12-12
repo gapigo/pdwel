@@ -30,7 +30,7 @@ Blog
     </div>
 
     <!-- Corpo da postagem -->
-    <section class="post__content">
+    <section class="post__content" style="margin-top: 10%">
         {!! $post->content !!}
         <a href="{{route('site.blog')}}" class="back__to__blog">Voltar para página inical do Blog</a>
     </section>

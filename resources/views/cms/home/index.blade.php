@@ -95,11 +95,17 @@ CMS
                     <div class="dropdown__content">
                         {{-- <p><img src="./images/edit-icon.svg" alt="">Editar postagem</p>
                         <p><img src="./images/delete-icon.svg" alt="">Excluir postagem</p> --}}
+                        <p id="show_post_button_{{$post->id}}">
+                            <img src="{{asset('images/edit-icon.svg')}}" alt="">Ver post</p>
                         <p id="edit_post_button_{{$post->id}}">
-                            <img src="{{asset('images/edit-icon.svg')}}" alt="">Editar categoria</p>
+                            <img src="{{asset('images/edit-icon.svg')}}" alt="">Editar post</p>
                         <p id="delete_post_button_{{$post->id}}">
-                            <img src="{{asset('images/delete-icon.svg')}}" alt="">Excluir categoria</p>
+                            <img src="{{asset('images/delete-icon.svg')}}" alt="">Excluir post</p>
                         <script>
+                            // redirect('/post/'.$post_id)
+                            document.getElementById("show_post_button_{{$post->id}}").onclick = function () {
+                                location.href = "/post/{{$post->id}}";
+                            };
                             document.getElementById("edit_post_button_{{$post->id}}").onclick = function () {
                                 location.href = "{{route('cms.edit.post', ['post'=> $post])}}";
                             };

@@ -63,47 +63,27 @@ Home
     <div class="main-wrapper">
         <div class="blog__container">
             <div class="blog__introduction">
-                <h2 class="title-large">Conheça alguns casos de sucesso!</h2>
+                <h2 class="title-large">Interaja em nosso blog!</h2>
                 <p>Temos uma gama gigantesca de programadores das mais diversas áreas que já foram 
-                    capazes de solucionar as dores de mais de 200 clientes</p>
+                    capazes de solucionar as dores de mais de 200 clientes e estão aqui para compartilhar
+                    seu conhecimento.</p>
                 <a href="{{route('site.blog')}}" role="button">Ver mais</a>
             </div>
 
+            @foreach($posts as $post)
             <article class="card__post">
-                <a href="javascript:;">
+                <a href="/post/{{$post->id}}">
                     <div class="post__cover">
-                        <img src="{{asset('images/safar-safarov-MSN8TFhJ0is-unsplash.jpg')}}">
+                        <img src="{{Storage::url($post->image)}}">
                     </div>
                     <header class="card__post__header">
-                        <time class="post__date" datetime="2019-03-29">18 Julho, 2019</time>
-                        <h3 class="body-large">E-commerce para loja de roupas.</h3>
+                        <time class="post__date" datetime="{{$post->created_at->format('Y-m-d')}}">
+                            {{$post->created_at->format('d/m/Y H:i')}}</time>
+                        <h3 class="body-large">{{$post->title}}</h3>
                     </header>
                 </a>
             </article>
-
-            <article class="card__post">
-                <a href="javascript:;">
-                    <div class="post__cover">
-                        <img src="{{asset('images/roman-synkevych-vXInUOv1n84-unsplash.jpg')}}">
-                    </div>
-                    <header class="card__post__header">
-                        <time class="post__date" datetime="2019-03-29">21 Fevereiro, 2020</time>
-                        <h3 class="body-large">App para clínica de estética. </h3>
-                    </header>
-                </a>
-            </article>
-
-            <article class="card__post">
-                <a href="javascript:;">
-                    <div class="post__cover">
-                        <img src="{{asset('images/max-duzij-qAjJk-un3BI-unsplash.jpg')}}">
-                    </div>
-                    <header class="card__post__header">
-                        <time class="post__date" datetime="2019-03-29">05 Maio, 2020</time>
-                        <h3 class="body-large">Automação para diretores cinematográficos. </h3>
-                    </header>
-                </a>
-            </article>
+            @endforeach
         </div>
     </div>
     <div class="pattern"></div>

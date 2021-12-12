@@ -1,7 +1,7 @@
 @extends('layouts.cms')
 
 @section('title')
-Editar categorias
+Criar novo post
 @endsection
 
 @section('css')

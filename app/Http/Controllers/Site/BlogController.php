@@ -48,8 +48,9 @@ class BlogController extends Controller
             $ultimo_elemento = $posts[0];
             // $recentes = array_slice($posts, 1, 3);
             // $antigos = array_slice($posts, 3, $tamanho);
-            $recentes = $posts->slice(1);
+            $recentes = $posts->slice(1, 2);
             $antigos = $posts->slice(3);
+            // dd($recentes);
             $last = $ultimo_elemento; $recent = $recentes; $old_posts = $antigos;
         }
         // dd($last['image']);

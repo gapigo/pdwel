@@ -4,6 +4,11 @@
 Blog
 @endsection
 
+@section('css')
+{{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
+@endsection
+
 @section('content')
 
     <header class="common-header">
@@ -13,10 +18,11 @@ Blog
         <div class="pattern__header"></div>
     </header>
 
-    <section class="main-wrapper flex-container blog__latest">
+    {{-- <section class="main-wrapper flex-container blog__latest"> --}}
         @if(!$last)
             <div class='alert alert-success'>Não há posts disponíveis no momento :(</div>
         @else
+        <section class="main-wrapper flex-container blog__latest">
             <article class="last__post">
                 <a href="{{route('site.show.post', ['post' => $last])}}">
                     <h1 class="title-medium">{{$last->title}}</h1>
@@ -45,32 +51,37 @@ Blog
                 </article>
                 @endforeach
             @endif
+        </section>
+            
+        <hr>
             @if($old_posts)
             <section class="gray-background ">
                 <div class="main-wrapper">
                     <h2 class="title-large">Artigos anteriores</h2>
-                    
-                    @foreach($old_posts as $old_post)
+
                     <div class="blog__older">
-                        <article class="card__post">
-                            <a href="{{route('site.show.post', ['post' => $old_post])}}">
-                                <div class="post__cover">
-                                    <img src="{{Storage::url($old_post->image)}}">
-                                </div>
-                                <header class="card__post__header">
-                                    <time class="post__date" datetime="{{$old_post->created_at->format('Y-m-d')}}">
-                                        {{$old_post->created_at->format('d/m/Y H:i')}}</time>
-                                    <h3 class="body-large">{{$old_post->title}}</h3>
-                                </header>
-                            </a>
-                        </article>
+                        @foreach($old_posts as $old_post)
+                        
+                            <article class="card__post">
+                                <a href="{{route('site.show.post', ['post' => $old_post])}}">
+                                    <div class="post__cover">
+                                        <img src="{{Storage::url($old_post->image)}}">
+                                    </div>
+                                    <header class="card__post__header">
+                                        <time class="post__date" datetime="{{$old_post->created_at->format('Y-m-d')}}">
+                                            {{$old_post->created_at->format('d/m/Y H:i')}}</time>
+                                        <h3 class="body-large">{{$old_post->title}}</h3>
+                                    </header>
+                                </a>
+                            </article>
+                        
+                        @endforeach
                     </div>
-                    @endforeach
                 </div>
             </section>
             @endif
         @endif
-    </section>
+
 
     
 
